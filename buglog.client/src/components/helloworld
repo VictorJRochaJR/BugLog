@@ -1,0 +1,22 @@
+<div class="row border p-3 m-3 shadow-lg">
+    <router-link :to="{name: 'BugDetails', params:{ id: bug.id}}">
+      <div class="col-3">
+        <span>{{ bug.title }}</span>
+      </div>
+      <div class="col-3">
+        <span>
+          {{ bug.creator.name }}
+        </span>
+      </div>
+      <div class="col-3">
+        <span class="text-danger" v-if="bug.closed === true">Closed</span>
+        <!-- {{ bug.closed ? }} -->
+        <span class="text-success" v-else>Open </span>
+      </div>
+      <div class="col-3">
+        <span>
+          {{ lastModified() }}
+        </span>
+      </div>
+    </router-link>
+  </div>
