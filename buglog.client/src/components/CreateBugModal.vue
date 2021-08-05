@@ -57,8 +57,7 @@ export default {
           router.push({ name: 'BugDetails', params: { id: bug.id } })
           state.newBug = {}
         } catch (error) {
-          console.log(state.newBug)
-          console.log(error)
+
         }
       }
     }

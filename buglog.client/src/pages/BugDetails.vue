@@ -44,8 +44,8 @@
         Add Bug Note
       </button>
     </div>
+    <CreateNoteModal />
   </div>
-  <CreateNoteModal />
 </template>
 
 <script>
@@ -63,12 +63,12 @@ export default {
       try {
         await notesService.getNotesByBugId(route.params.id)
       } catch (error) {
-        console.log(error)
+
       }
       try {
         await bugsService.getBugById(route.params.id)
       } catch (error) {
-        console.log(error)
+
       }
     })
     return {

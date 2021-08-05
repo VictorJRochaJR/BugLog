@@ -38,7 +38,7 @@ export default {
             await notesService.getNotesByBugId(route.params.id)
           }
         } catch (error) {
-          console.log(error)
+
         }
       },
       account: computed(() => AppState.account)

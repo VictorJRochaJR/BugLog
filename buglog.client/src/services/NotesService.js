@@ -5,12 +5,10 @@ class NotesService {
   async getNotesByBugId(id) {
     const res = await api.get(`api/bugs/${id}/notes`)
     AppState.bugNotes = res.data
-    console.log(res.data, 'bug notes')
   }
 
   async createNote(newNote) {
-    const res = await api.post('api/notes/', newNote)
-    console.log('newnote', res.data)
+    await api.post('api/notes/', newNote)
   }
 
   async deleteNote(noteId) {

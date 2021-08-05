@@ -50,8 +50,7 @@ export default {
           await notesService.getNotesByBugId(route.params.id)
           state.newNote = {}
         } catch (error) {
-          console.log(error)
-          console.log(state.newNote)
+
         }
       }
     }
